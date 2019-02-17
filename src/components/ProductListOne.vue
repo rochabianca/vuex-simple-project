@@ -1,13 +1,21 @@
 <template>
-  <div class="product-list-one">
-    <h2>Product List One</h2>
-    <ul>
-      <li v-for="(product, index) in saleProducts" :key="index">
+  <div
+    class="product-list product-list-one col-lg-5 col-md-12 col-sm-12 mr-lg-5 mb-md-5 mb-sm-4"
+  >
+    <h2 class="text-center my-4 title">Product List One</h2>
+    <ul class="m-0 p-0">
+      <li
+        v-for="(product, index) in saleProducts"
+        :key="index"
+        class="d-flex justify-content-between mb-3 product-item"
+      >
         <span class="name">{{ product.name }} </span>
         <span class="price">${{ product.price }}</span>
       </li>
     </ul>
-    <button @click="reducePrice(4)">Reduce Price</button>
+    <button class="btn btn-block btn-light my-4" @click="reducePrice(4)">
+      Reduce Price
+    </button>
   </div>
 </template>
 
@@ -27,25 +35,25 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-.product-list-one {
-  background: #4e65f6;
-  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
-  margin-bottom: 30px;
-  padding: 10px 20px;
-}
-.product-list-one ul {
-  padding: 0;
-}
-.product-list-one li {
-  display: inline-block;
-  margin-right: 10px;
-  margin-top: 10px;
-  padding: 20px;
-  background: #9fa6e3;
-}
-.price {
-  font-weight: bold;
+<style lang="scss">
+.product-list {
   color: white;
+  border-radius: 5px;
+  box-shadow: 2px 2px 8px #ddd;
+  &.product-list-one {
+    background: #0a92f8;
+  }
+  &.product-list-two {
+    background: #57b07c;
+  }
+  ul {
+    list-style: none;
+  }
+  .product-item {
+    background: #fff;
+    color: #444;
+    padding: 15px;
+    border-radius: 3px;
+  }
 }
 </style>

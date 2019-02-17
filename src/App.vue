@@ -1,7 +1,12 @@
 <template>
-  <div id="app">
-    <ProductListOne></ProductListOne>
-    <ProductListTwo></ProductListTwo>
+  <div
+    id="app"
+    class="container"
+  >
+    <div class="row justify-content-center mt-md-5">
+      <ProductListOne></ProductListOne>
+      <ProductListTwo></ProductListTwo>
+    </div>
   </div>
 </template>
 
@@ -14,7 +19,7 @@ export default {
     ProductListOne,
     ProductListTwo
   },
-  data() {
+  data () {
     return {};
   }
 };
@@ -22,9 +27,7 @@ export default {
 
 <style lang="scss">
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  color: #fff;
-  background: #dddee6;
+  font-family: "Montserrat", sans-serif;
+  background: #fafcfd;
 }
 </style>
