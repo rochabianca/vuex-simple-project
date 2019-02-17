@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <ProductListOne :products="products"></ProductListOne>
-    <ProductListTwo :products="products"></ProductListTwo>
+    <ProductListOne></ProductListOne>
+    <ProductListTwo></ProductListTwo>
   </div>
 </template>
 
@@ -15,13 +15,7 @@ export default {
     ProductListTwo
   },
   data() {
-    return {
-      products: [
-        { name: "Banana Skin", price: 20 },
-        { name: "Shiny Star", price: 40 },
-        { name: "Red Shells", price: 80 }
-      ]
-    };
+    return {};
   }
 };
 </script>
