@@ -1,29 +1,36 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view />
+    <ProductListOne :products="products"></ProductListOne>
+    <ProductListTwo :products="products"></ProductListTwo>
   </div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-#nav {
-  padding: 30px;
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+<script>
+import ProductListOne from "@/components/ProductListOne";
+import ProductListTwo from "@/components/ProductListTwo";
+export default {
+  name: "app",
+  components: {
+    ProductListOne,
+    ProductListTwo
+  },
+  data() {
+    return {
+      products: [
+        { name: "Banana Skin", price: 20 },
+        { name: "Shiny Star", price: 40 },
+        { name: "Red Shells", price: 80 }
+      ]
+    };
   }
+};
+</script>
+
+<style lang="scss">
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #fff;
+  background: #dddee6;
 }
 </style>
